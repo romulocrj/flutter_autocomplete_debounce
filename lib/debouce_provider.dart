@@ -14,7 +14,7 @@ class DebounceProvider {
     if (_debounceTimer?.isActive ?? false) {
       _debounceTimer?.cancel();
     }
-    _debounceTimer = Timer(duration, () async {
+    _debounceTimer = Timer(duration, () {
       var result = func();
       _f?.complete(result);
       _f = null;
